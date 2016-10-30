@@ -1,0 +1,19 @@
+{
+  "bootstrapVersion": 3,
+
+  "useFlexbox": true,
+
+  "styleLoaders": [ "style", "css", "postcss", "sass" ],
+
+  "styles": {
+    "normalize": true,
+    "print": true
+  },
+
+  "scripts": {
+    "alert": true,
+    "button": true
+  },
+
+  "loglevel": "debug"
+}

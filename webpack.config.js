@@ -50,7 +50,7 @@ module.exports = function makeWebpackConfig() {
   config.entry = isTest ? {} : {
     'polyfills': "./src/polyfills.ts",
     'vendor': "./src/vendor.ts",
-    'app': "./src/main.ts" // our angular app
+    'app': ["bootstrap-loader", "./src/main.ts"] // our angular app
   };
 
   /**
@@ -125,6 +125,9 @@ module.exports = function makeWebpackConfig() {
       // all css required in src/app files will be merged in js files
       {test: /\.(scss|sass)$/, exclude: root("src", "style"), loader: "raw!postcss!sass"},
 
+      // Bootstrap 3
+      { test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: "imports-loader?jQuery=jquery" },
+
       // support for .html as raw text
       // todo: change the loader to something that adds a hash to images
       {test: /\.html$/, loader: "raw",  exclude: root("src", "public")}
@@ -174,8 +177,11 @@ module.exports = function makeWebpackConfig() {
       ),
 
     // Tslint configuration for webpack 2
-    new webpack.LoaderOptionsPlugin({
-      options: {
+      new webpack.LoaderOptionsPlugin({
+        options: {
+          context: __dirname,  // this needs to be set to root aka __dirname (is mapped to root)
+          output: config.output,
+
         /**
          * Apply the tslint loader as pre/postLoader
          * Reference: https://github.com/wbuchwalter/tslint-loader

@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{19994996-4b55-406e-b0b3-87e95479c54f}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>webpack.config.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -19,6 +19,10 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".bootstraprc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="package.json" />
     <Content Include="src\app\app.component.scss" />
     <Content Include="src\app\calendar\calendar.component.html" />
