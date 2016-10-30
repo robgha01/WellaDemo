@@ -28,10 +28,10 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular2-webpack.git my-app
+$ git clone https://github.com/preboot/angular2-webpack.git wella-poc
 
 # change directory to your app
-$ cd my-app
+$ cd wella-poc
 
 # install the dependencies with npm
 $ npm install

@@ -20,12 +20,23 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Content Include="package.json" />
+    <Content Include="src\app\app.component.scss" />
+    <Content Include="src\app\calendar\calendar.component.html" />
+    <Content Include="src\app\calendar\calendar.component.scss" />
+    <Content Include="src\app\courses\courses.component.html" />
+    <Content Include="src\app\courses\courses.component.scss" />
+    <Content Include="src\app\home\home.component.scss" />
+    <Content Include="src\app\login\login.component.html" />
+    <Content Include="src\app\login\login.component.scss" />
     <Content Include="src\app\profile\profile.component.scss" />
+    <Content Include="src\app\search\search.component.html" />
+    <Content Include="src\app\search\search.component.scss" />
     <Content Include="src\public\img\facebook-login.png" />
     <Content Include="src\public\img\favicon.png" />
     <Content Include="src\public\img\slideshow_1.jpg" />
     <Content Include="src\public\img\slideshow_2.jpg" />
     <Content Include="src\public\img\slideshow_3.jpg" />
+    <Content Include="src\style\app.scss" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
     <Content Include="typedoc.json" />
@@ -35,6 +46,10 @@
     <Compile Include="karma.conf.js" />
     <Compile Include="protractor.conf.js" />
     <Compile Include="webpack.config.js" />
+    <TypeScriptCompile Include="src\app\calendar\calendar.component.ts" />
+    <TypeScriptCompile Include="src\app\courses\courses.component.ts" />
+    <TypeScriptCompile Include="src\app\login\login.component.ts" />
+    <TypeScriptCompile Include="src\app\search\search.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -47,7 +62,6 @@
     <Content Include="src\public\index.html" />
     <Compile Include="src\public\service-worker.js" />
     <Content Include="src\app\profile\profile.component.html" />
-    <TypeScriptCompile Include="src\app\profile\profile.component.spec.ts" />
     <TypeScriptCompile Include="src\app\profile\profile.component.ts" />
     <Content Include="src\app\home\home.component.html" />
     <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
@@ -62,6 +76,9 @@
   <ItemGroup>
     <Folder Include="src" />
     <Folder Include="src\app" />
+    <Folder Include="src\app\login\" />
+    <Folder Include="src\app\courses\" />
+    <Folder Include="src\app\calendar\" />
     <Folder Include="src\app\profile\" />
     <Folder Include="src\app\home" />
     <Folder Include="src\app\search\" />
