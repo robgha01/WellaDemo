@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
-import { MyProfileComponent } from "./myprofile/my-profile.component";
+import { ProfileComponent } from "./profile/profile.component";
 import { ApiService } from "./shared";
 import { routing } from "./app.routing";
 
@@ -21,7 +21,7 @@ import { removeNgStyles, createNewHosts } from "@angularclass/hmr";
     declarations: [
         AppComponent,
         HomeComponent,
-        MyProfileComponent
+        ProfileComponent
     ],
     providers: [
         ApiService

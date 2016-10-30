@@ -20,7 +20,7 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
     <Content Include="package.json" />
-    <Content Include="src\app\myprofile\my-profile.component.scss" />
+    <Content Include="src\app\profile\profile.component.scss" />
     <Content Include="src\public\img\facebook-login.png" />
     <Content Include="src\public\img\favicon.png" />
     <Content Include="src\public\img\slideshow_1.jpg" />
@@ -46,9 +46,9 @@
     <Compile Include="src\app\app.component.e2e-spec.js" />
     <Content Include="src\public\index.html" />
     <Compile Include="src\public\service-worker.js" />
-    <Content Include="src\app\myprofile\my-profile.component.html" />
-    <TypeScriptCompile Include="src\app\myprofile\my-profile.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\myprofile\my-profile.component.ts" />
+    <Content Include="src\app\profile\profile.component.html" />
+    <TypeScriptCompile Include="src\app\profile\profile.component.spec.ts" />
+    <TypeScriptCompile Include="src\app\profile\profile.component.ts" />
     <Content Include="src\app\home\home.component.html" />
     <TypeScriptCompile Include="src\app\home\home.component.spec.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
@@ -62,7 +62,7 @@
   <ItemGroup>
     <Folder Include="src" />
     <Folder Include="src\app" />
-    <Folder Include="src\app\myprofile\" />
+    <Folder Include="src\app\profile\" />
     <Folder Include="src\app\home" />
     <Folder Include="src\app\search\" />
     <Folder Include="src\app\shared" />
