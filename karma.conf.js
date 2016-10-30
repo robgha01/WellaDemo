@@ -1,23 +1,23 @@
-var path = require('path');
+var path = require("path");
 
-var webpackConfig = require('./webpack.config');
+var webpackConfig = require("./webpack.config");
 
 var ENV = process.env.npm_lifecycle_event;
-var isTestWatch = ENV === 'test-watch';
+var isTestWatch = ENV === "test-watch";
 
 module.exports = function (config) {
   var _config = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: "",
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ["jasmine"],
 
     // list of files / patterns to load in the browser
     files: [
-      { pattern: './karma-shim.js', watched: false }
+      { pattern: "./karma-shim.js", watched: false }
     ],
 
     // list of files to exclude
@@ -26,7 +26,7 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      './karma-shim.js': ['webpack', 'sourcemap']
+      './karma-shim.js': ["webpack", "sourcemap"]
     },
 
     webpack: webpackConfig,
@@ -34,7 +34,7 @@ module.exports = function (config) {
     webpackMiddleware: {
       // webpack-dev-middleware configuration
       // i. e.
-      stats: 'errors-only'
+      stats: "errors-only"
     },
 
     webpackServer: {
@@ -61,7 +61,7 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: isTestWatch ? ['Chrome'] : ['PhantomJS'], 
+    browsers: isTestWatch ? ["Chrome"] : ["PhantomJS"], 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
@@ -72,12 +72,12 @@ module.exports = function (config) {
     _config.reporters.push("coverage");
 
     _config.coverageReporter = {
-      dir: 'coverage/',
+      dir: "coverage/",
       reporters: [{
-        type: 'json',
-        dir: 'coverage',
-        subdir: 'json',
-        file: 'coverage-final.json'
+        type: "json",
+        dir: "coverage",
+        subdir: "json",
+        file: "coverage-final.json"
       }]
     };
   }

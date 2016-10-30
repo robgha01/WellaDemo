@@ -1,12 +1,12 @@
 exports.config = {
-  baseUrl: 'http://localhost:8080/',
+  baseUrl: "http://localhost:8080/",
 
   specs: [
-    'src/**/*.e2e-spec.js'
+    "src/**/*.e2e-spec.js"
   ],
   exclude: [],
 
-  framework: 'jasmine2',
+  framework: "jasmine2",
 
   allScriptsTimeout: 110000,
 
@@ -20,11 +20,11 @@ exports.config = {
   directConnect: true,
 
   capabilities: {
-    'browserName': 'chrome'
+    'browserName': "chrome"
   },
 
   onPrepare: function () {
-    var SpecReporter = require('jasmine-spec-reporter');
+    var SpecReporter = require("jasmine-spec-reporter");
     // add jasmine spec reporter
     jasmine.getEnv().addReporter(new SpecReporter({displayStacktrace: true}));
 
