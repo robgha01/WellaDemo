@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{19994996-4b55-406e-b0b3-87e95479c54f}</ProjectGuid>
     <ProjectHome />
-    <ProjectView>ProjectFiles</ProjectView>
+    <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>webpack.config.js</StartupFile>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -59,7 +59,6 @@
     <Compile Include="src\public\js\ie8-responsive-file-warning.js" />
     <Compile Include="src\public\js\jquery.min.js" />
     <Compile Include="webpack.config.js" />
-    <TypeScriptCompile Include="src\app\abstraction\ProtectedComponent.ts" />
     <TypeScriptCompile Include="src\app\core.module.ts.t" />
     <TypeScriptCompile Include="src\app\calendar\calendar.component.ts" />
     <TypeScriptCompile Include="src\app\courses\courses.component.ts" />
