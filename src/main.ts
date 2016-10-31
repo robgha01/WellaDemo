@@ -1,6 +1,9 @@
+/// <reference path="../node_modules/firebase/firebase.d.ts" />
+/// <reference path="../node_modules/angularfire2/index.d.ts" />
 import { enableProdMode } from "@angular/core";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 import { AppModule } from "./app/app.module";
+import { FIREBASE_PROVIDERS } from 'angularfire2';
 
 // depending on the env mode, enable prod mode or add debugging modules
 if (process.env.ENV === "build") {
@@ -8,7 +11,7 @@ if (process.env.ENV === "build") {
 }
 
 export function main() {
-  return platformBrowserDynamic().bootstrapModule(AppModule);
+  return platformBrowserDynamic([FIREBASE_PROVIDERS]).bootstrapModule(AppModule);
 }
 
 if (document.readyState === "complete") {

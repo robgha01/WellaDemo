@@ -17,13 +17,38 @@ import { routing } from "./app.routing";
 
 import { removeNgStyles, createNewHosts } from "@angularclass/hmr";
 
+import {
+  AngularFireModule,
+  AuthMethods,
+  AuthProviders,
+  defaultFirebase,
+  firebaseAuthConfig
+} from "angularfire2";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCpa4_ei6Kjl0bvdyM6moVU_tXSP8TlyCY",
+  authDomain: "wellapoc.firebaseapp.com",
+  databaseURL: "https://wellapoc.firebaseio.com",
+  storageBucket: "wellapoc.appspot.com"
+};
+
+defaultFirebase(firebaseConfig);
+
+firebaseAuthConfig({
+  method: AuthMethods.Popup
+});
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
     routing,
-    CalendarModule.forRoot()
+    CalendarModule.forRoot(),
+    AngularFireModule.initializeApp(firebaseConfig, {
+      provider: AuthProviders.Facebook,
+      method: AuthMethods.Popup
+    })
   ],
   declarations: [
     AppComponent,
