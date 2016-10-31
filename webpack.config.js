@@ -120,10 +120,10 @@ module.exports = function makeWebpackConfig() {
       {
         test: /\.(scss|sass)$/,
         exclude: root("src", "app"),
-        loader: isTest ? "null" : ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: ["css", "postcss", "sass"]})
+        loader: isTest ? "null" : ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: ["css", "postcss", "sass", "sass-resources"]})
       },
       // all css required in src/app files will be merged in js files
-      {test: /\.(scss|sass)$/, exclude: root("src", "style"), loader: "raw!postcss!sass"},
+      { test: /\.(scss|sass)$/, exclude: root("src", "style"), loader: "raw!postcss!sass!sass-resources"},
 
       // Bootstrap 3
       { test: /bootstrap-sass[\/\\]assets[\/\\]javascripts[\/\\]/, loader: "imports-loader?jQuery=jquery" },
@@ -133,6 +133,8 @@ module.exports = function makeWebpackConfig() {
       {test: /\.html$/, loader: "raw",  exclude: root("src", "public")}
     ]
   };
+
+  config.sassResources = ["./style/resources/**/*.scss"];
 
   if (isTest && !isTestWatch) {
     // instrument only testing sources with Istanbul, covers ts files

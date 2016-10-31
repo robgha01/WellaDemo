@@ -83,6 +83,7 @@
     "resolve-url-loader": "^1.6.0",
     "rimraf": "^2.5.1",
     "sass-loader": "^4.0.0",
+    "sass-resources-loader": "^1.1.0",
     "shelljs": "^0.7.0",
     "style-loader": "^0.13.0",
     "ts-helpers": "^1.1.1",

@@ -1,8 +1,34 @@
 // styles in src/style directory are applied to the whole page
-body {
-    background: #0147A7;
-    color: #fff;
+@media (min-width: 768px) {
+    .navbar-nav {
+        clear: left;
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+
+    .navbar li {
+        margin-left : 1em;
+        margin-right : 1em;
+    }
 }
-a {
-    color: #03A9F4;
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+  float: none !important;
+  margin: 0 auto !important;
 }
+
+.navbar-brand {
+  padding: 0px !important; /* firefox bug fix */
+  float: none !important;
+  margin: 0 auto !important;
+  display: table !important;
+  table-layout: fixed !important;
+}
+.navbar-brand>img {
+  /*height: 100%;*/
+  padding: 15px; /* firefox bug fix */
+  /*width: auto;*/
+}
+

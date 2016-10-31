@@ -12,7 +12,7 @@ export class ProfileComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log("Hello About");
+        console.log("Hello profile");
     }
 
 }

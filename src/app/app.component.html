@@ -1,20 +1,46 @@
 <header>
-    <nav>
-        <a [routerLink]="['']">Home</a>
-        <a [routerLink]="['profile']">Min Profil</a>
-        <a [routerLink]="['courses']">Kurser</a>
-        <a [routerLink]="['calendar']">Kalender</a>
-        <a [routerLink]="['search']">Sök</a>
-    </nav>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" [routerLink]="['']"><img src="/img/favicon.png" style="max-width: 96px;"></a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a [routerLink]="['profile']">Min Profil</a></li>
+          <li><a [routerLink]="['courses']">Kurskalender</a></li>
+          <li>
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" style="max-width: 10em;" placeholder="Sök ort" name="srch-term" id="srch-term"><a [routerLink]="['search']">Sök</a> [inloggad som Carl Schéle] <a [routerLink]="['']">Logga ut</a>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--<nav>
+    <a [routerLink]="['']">Home</a>
+    <a [routerLink]="['profile']">Min Profil</a>
+    <a [routerLink]="['courses']">Kurser</a>
+    <a [routerLink]="['calendar']">Kalender</a>
+    <a [routerLink]="['search']">Sök</a>
+  </nav>-->
 </header>
 <main>
-    <h1>Hello from {{api.title}}!</h1>
+  <h1>Hello from {{api.title}}!</h1>
 
-    <!-- Images (and assets) are parsed and loaded from within the public directory -->
-    <img src="/img/angular.png">
+  <!-- Images (and assets) are parsed and loaded from within the public directory -->
+  <!--<img src="/img/angular.png">-->
 
     <router-outlet></router-outlet>
 </main>
 <footer>
-    <a [href]="url">Webpack Angular 2 Starter</a>
+    <!--<a [href]="url">Webpack Angular 2 Starter</a>-->
 </footer>
