@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { AngularFire, AuthProviders } from 'angularfire2';
+import { AngularFire, AuthProviders } from "angularfire2";
 import { UserService } from "../shared/";
-import { Router } from '@angular/router'
+import { Router } from "@angular/router"
 
 @Component({
   selector: "my-login", // <my-login></my-login>

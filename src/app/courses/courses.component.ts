@@ -10,27 +10,27 @@ import {
   subWeeks,
   addMonths,
   subMonths
-} from 'date-fns';
+} from "date-fns";
 import {
   CalendarEvent,
   CalendarEventAction
-} from 'angular2-calendar';
+} from "angular2-calendar";
 
 require("angular2-calendar");
 require("angular2-calendar/dist/css/angular2-calendar.css");
 
 const colors: any = {
   red: {
-    primary: '#ad2121',
-    secondary: '#FAE3E3'
+    primary: "#ad2121",
+    secondary: "#FAE3E3"
   },
   blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF'
+    primary: "#1e90ff",
+    secondary: "#D1E8FF"
   },
   yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA'
+    primary: "#e3bc08",
+    secondary: "#FDF1BA"
   }
 };
 
@@ -49,14 +49,14 @@ export class CoursesComponent implements OnInit {
     console.log("Hello Courses");
   }
 
-  view: string = 'month';
+  view: string = "month";
 
   viewDate: Date = new Date();
 
   actions: CalendarEventAction[] = [{
     label: '<i class="fa fa-fw fa-pencil"></i>',
     onClick: ({event}: { event: CalendarEvent }): void => {
-      console.log('Edit event', event);
+      console.log("Edit event", event);
     }
   }, {
     label: '<i class="fa fa-fw fa-times"></i>',
@@ -68,18 +68,18 @@ export class CoursesComponent implements OnInit {
   events: CalendarEvent[] = [{
     start: subDays(startOfDay(new Date()), 1),
     end: addDays(new Date(), 1),
-    title: 'A 3 day event',
+    title: "A 3 day event",
     color: colors.red,
     actions: this.actions
   }, {
     start: startOfDay(new Date()),
-    title: 'An event with no end date',
+    title: "An event with no end date",
     color: colors.yellow,
     actions: this.actions
   }, {
     start: subDays(endOfMonth(new Date()), 3),
     end: addDays(endOfMonth(new Date()), 3),
-    title: 'A long event that spans 2 months',
+    title: "A long event that spans 2 months",
     color: colors.blue
   }];
 

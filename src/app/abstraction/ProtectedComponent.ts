@@ -1,5 +1,5 @@
 ﻿import { UserService } from "../shared/";
-import { Router } from '@angular/router'
+import { Router } from "@angular/router"
 
 export abstract class ProtectedComponent {
   constructor(public userService: UserService, protected router: Router) {
