@@ -59,11 +59,13 @@
     <Compile Include="src\public\js\ie8-responsive-file-warning.js" />
     <Compile Include="src\public\js\jquery.min.js" />
     <Compile Include="webpack.config.js" />
+    <TypeScriptCompile Include="src\app\abstraction\ProtectedComponent.ts" />
     <TypeScriptCompile Include="src\app\core.module.ts.t" />
     <TypeScriptCompile Include="src\app\calendar\calendar.component.ts" />
     <TypeScriptCompile Include="src\app\courses\courses.component.ts" />
     <TypeScriptCompile Include="src\app\login\login.component.ts" />
     <TypeScriptCompile Include="src\app\search\search.component.ts" />
+    <TypeScriptCompile Include="src\app\shared\user.service.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
@@ -93,6 +95,7 @@
     <Folder Include="src\app\login\" />
     <Folder Include="src\app\courses\" />
     <Folder Include="src\app\calendar\" />
+    <Folder Include="src\app\abstraction\" />
     <Folder Include="src\app\profile\" />
     <Folder Include="src\app\home" />
     <Folder Include="src\app\search\" />

@@ -12,7 +12,7 @@ import { CalendarComponent } from "./calendar/calendar.component";
 import { CoursesComponent } from "./courses/courses.component";
 import { LoginComponent } from "./login/login.component";
 import { SearchComponent } from "./search/search.component";
-import { ApiService } from "./shared";
+import { ApiService, UserService } from "./shared";
 import { routing } from "./app.routing";
 
 import { removeNgStyles, createNewHosts } from "@angularclass/hmr";
@@ -60,7 +60,8 @@ firebaseAuthConfig({
     SearchComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })
