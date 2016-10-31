@@ -3,6 +3,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 
+import { CalendarModule } from "angular2-calendar";
+
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
 import { ProfileComponent } from "./profile/profile.component";
@@ -16,44 +18,45 @@ import { routing } from "./app.routing";
 import { removeNgStyles, createNewHosts } from "@angularclass/hmr";
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        HttpModule,
-        FormsModule,
-        routing
-    ],
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        ProfileComponent,
-        CalendarComponent,
-        CoursesComponent,
-        LoginComponent,
-        SearchComponent
-    ],
-    providers: [
-        ApiService
-    ],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    HttpModule,
+    FormsModule,
+    routing,
+    CalendarModule.forRoot()
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProfileComponent,
+    CalendarComponent,
+    CoursesComponent,
+    LoginComponent,
+    SearchComponent
+  ],
+  providers: [
+    ApiService
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
-    constructor(public appRef: ApplicationRef) {}
+  constructor(public appRef: ApplicationRef) {}
 
-    hmrOnInit(store) {
-        console.log("HMR store", store);
-    }
+  hmrOnInit(store) {
+    console.log("HMR store", store);
+  }
 
-    hmrOnDestroy(store) {
-        let cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
-        // recreate elements
-        store.disposeOldHosts = createNewHosts(cmpLocation);
-        // remove styles
-        removeNgStyles();
-    }
+  hmrOnDestroy(store) {
+    let cmpLocation = this.appRef.components.map(cmp => cmp.location.nativeElement);
+    // recreate elements
+    store.disposeOldHosts = createNewHosts(cmpLocation);
+    // remove styles
+    removeNgStyles();
+  }
 
-    hmrAfterDestroy(store) {
-        // display new elements
-        store.disposeOldHosts();
-        delete store.disposeOldHosts;
-    }
+  hmrAfterDestroy(store) {
+    // display new elements
+    store.disposeOldHosts();
+    delete store.disposeOldHosts;
+  }
 }
